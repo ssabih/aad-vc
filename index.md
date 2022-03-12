@@ -123,7 +123,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Finally into Verifiable Credentials (VC). In short VC is a digital credential which has claims about the subject of the VC and its signed by private key of an issuer's DID. Below is an example of an AAD VC.</p>
+<p>Finally into Verifiable Credentials (VC). In short VC is a digital credential which has claims about the subject of the VC and its signed by the private key of an issuer's DID. Below is an example of an AAD VC.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"id":66,"width":257,"height":478,"sizeSlug":"large","linkDestination":"none","style":{"color":{}},"className":"is-style-default"} -->
