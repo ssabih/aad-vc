@@ -24,7 +24,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>DID document is a nice a way of storing the public key along with other information but public key is the most important information contained in the DID document. DID does not require PKI or any of its component. </p>
+<p>DID document is a nice a way of storing the public key along with other information but public key is the most important information contained in the DID document. DID does not require Certificate Authority (CA) or intermediate CAs, that terminology does not apply instead there is a concept of decentralized PKI. </p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
