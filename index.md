@@ -1,10 +1,10 @@
 # Mechanics of AAD Verifiable Credentials
 <!-- wp:paragraph -->
-<p>In this article we will understand how the AAD Verifiable Credentials (AAD VC) work and how it make use of the DID. There is confusion when it comes to DID Vs AAD VC and how one makes the other possible.</p>
+<p>In this article I will explain in a simplified way, how AAD Verifiable Credentials (AAD VC) works when it comes to DID.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>To Understand AAD VC, there are some core concepts we have to be clear about. Although there is plenty of information available on these concepts, I will try to simplify it as much as I can in the context of this article and keep the explanation brief. </p>
+<p>To Understand AAD VC, there are some core concepts we have to be clear about. Although there is plenty of information available on these concepts already, I will try to simplify it as much as I can in the context of this article and keep the explanation brief. </p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
