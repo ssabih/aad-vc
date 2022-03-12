@@ -103,7 +103,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Linked Domain in the context of AAD VC represents issuer and the user agent which is Microsoft Authenticator confirms if the Linked Domain is verified or not once it receives the VC.</p>
+<p>Linked Domain in the context of AAD VC represents issuer and the user agent which is Microsoft Authenticator confirms if the Linked Domain is verified or not on receiving the VC.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"id":71,"width":514,"height":98,"sizeSlug":"large","linkDestination":"none"} -->
