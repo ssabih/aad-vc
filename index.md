@@ -1,4 +1,4 @@
-# Mechanics of AAD Verifiable Credentials
+# Basics of AAD Verifiable Credentials
 <!-- wp:paragraph -->
 <p>In this article I will explain the core concepts involved in AAD Verifiable Credentials (AAD VC). Although there is plenty of information available on these concepts already, I will try to simplify it as much as I can in the context of this article and keep the explanation brief. </p>
 <!-- /wp:paragraph -->
