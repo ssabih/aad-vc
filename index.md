@@ -123,7 +123,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Now that I have mentioned ION in my previous section, let me explain it briefly. Identity Overlay Network (ION) is a storage mechanism for DID documents. In the world of DID, everything needs to be decentralized including the storage where the DID documents are stored and ION provides that capability. ION nodes are not owned by any single entity and anyone can spin up an ION node and become part of the ION network.</p>
+<p>Now that I have mentioned ION in my previous section, let me explain it briefly. Identity Overlay Network (ION) in simple words is a storage mechanism for DID documents. In the world of DID, everything needs to be decentralized. ION nodes are not owned by any single entity and anyone can spin up an ION node and become part of the ION network. ION provides a permissionless network for DID</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
