@@ -16,7 +16,7 @@
 <!-- /wp:code -->
 
 <!-- wp:paragraph -->
-<p>Above is an example of a DID. In short DID is an address that resolves to a DID document which contains useful information about the subject DID refers to. Subject can be an organization, person, device etc. DID has three parts: scheme which is denoted by did:, method identifier which in my case is ION and a unique identifier. If I know a DID, I can resolve it to get the information available in the DID document. DID is immutable and cannot be transferred throughout its life but a DID document can be updated after its creation.</p>
+<p>Above is an example of a DID. In short DID is an address that resolves to a DID document which contains useful information about the subject DID refers to. Subject can be an organization, person, device etc. DID has three parts: scheme which is denoted by did:, method identifier which in my case is ION and a unique identifier. If I know a DID, I can resolve it to get the information available in the DID document. DID is immutable but a DID document can be updated after its creation.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -99,7 +99,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>I mentioned in previous section that my DID document contains a Linked Domain and we can see that its called "https://custom-domain.net". In short, its an SSL binding which proves that the subject of the DID controls this domain.</p>
+<p>I mentioned in previous section that my DID document contains a Linked Domain and we can see that its called "https://custom-domain.net". In short, its an SSL binding which proves that the controller of the DID controls this domain.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
