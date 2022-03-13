@@ -1,6 +1,6 @@
-# Basics of AAD Verifiable Credentials
+# Fundamentals of AAD Verifiable Credentials
 <!-- wp:paragraph -->
-<p>In this article I will explain the core concepts involved in AAD Verifiable Credentials (AAD VC). Although there is plenty of information available on these concepts already, I will try to simplify it as much as I can in the context of this article and keep the explanation brief. </p>
+<p>In this article I will explain the core concepts involved in AAD Verifiable Credentials (AAD VC) and how they come together in the big picture. Although there is plenty of information available on these concepts already, I will try to simplify it as much as possible in an order that is easy to grasp.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -8,7 +8,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>If you are reading this article then you already have an idea about a DID (Decentralized Identifier). Its very important to understand DID as it enables Verifiable Credential (VC). In other words DID makes VC possible. </p>
+<p>Its very important to understand Decentralized Identifier (DID) as it enables Verifiable Credential (VC).  </p>
 <!-- /wp:paragraph -->
 
 <!-- wp:code -->
@@ -16,7 +16,7 @@
 <!-- /wp:code -->
 
 <!-- wp:paragraph -->
-<p>Above is an example of a DID. In short DID is a pointer to a DID document which contains useful information about the subject and subject is an entity DID refers to. Subject can be an organization, person, device etc. If I know a DID, I can resolve it to get the information available in the DID document.</p>
+<p>Above is an example of a DID. In short DID is an address that resolves to a DID document which contains useful information about the subject DID refers to. Subject can be an organization, person, device etc. DID has three parts: scheme which is denoted by did:, method identifier which in my case is ION and a unique identifier. If I know a DID, I can resolve it to get the information available in the DID document. DID is immutable and cannot be transferred throughout its life but a DID document can be updated after its creation.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
@@ -24,7 +24,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>DID document is a nice a way of storing the public key along with other information but public key is the most important information contained in the DID document. DID does not require Certificate Authority (CA) or intermediate CAs, that terminology does not apply instead there is a concept of decentralized PKI. </p>
+<p>DID document in simple words is just a nice a way of storing the public key along with other useful information in a DID document. DID does not require a validator such as Certificate Authority (CA) or intermediate CAs, that terminology does not apply instead there is a concept of decentralized PKI (discussed under ION section).</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -103,7 +103,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>Linked Domain in the context of AAD VC represents issuer and the user agent which is Microsoft Authenticator confirms if the Linked Domain is verified or not on receiving the VC.</p>
+<p>Linked Domain in the context of AAD VC represents issuer and the user agent which is Microsoft Authenticator confirms if the Linked Domain is verified or not once it receives the VC.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"id":71,"width":514,"height":98,"sizeSlug":"large","linkDestination":"none"} -->
@@ -119,15 +119,43 @@
 <!-- /wp:code -->
 
 <!-- wp:heading {"level":3} -->
-<h3>Verifiable Credentials</h3>
+<h3>ION</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Finally into Verifiable Credentials (VC). In short VC is a digital credential which has claims about the subject of the VC and its signed by the private key of an issuer's DID. Below is an example of an AAD VC.</p>
+<p>Now that I have mentioned ION in my previous section, let me explain it briefly. Identity Overlay Network (ION) is a storage mechanism for DID documents. In the world of DID, everything needs to be decentralized including the storage where the DID documents are stored and ION provides that capability. ION nodes are not owned by any single entity and anyone can spin up an ION node and become part of the ION network.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:image {"id":66,"width":257,"height":478,"sizeSlug":"large","linkDestination":"none","style":{"color":{}},"className":"is-style-default"} -->
-<figure class="wp-block-image size-large is-resized is-style-default"><img src="https://sabih114253105.files.wordpress.com/2022/03/aad-vc.jpeg?w=549" alt="" class="wp-image-66" width="257" height="478"/></figure>
+<!-- wp:paragraph -->
+<p>After a DID document is created, it will change over time due to operations such as keys rollover. All of these operations have to be tracked, ION provides this capability through Sidetree protocol which runs on all ION nodes.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>All the signed Sidetree transactions are put in a Batch file which is connected to an Anchor file that has the Merkle Root. What's written to the ledger (Bitcoin) is the single IPFS hash of the singed Anchor file that can represent thousands of DID operations in a specific Batch.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":100,"sizeSlug":"large","linkDestination":"none"} -->
+<figure class="wp-block-image size-large"><img src="https://sabih114253105.files.wordpress.com/2022/03/sidetree-2.png?w=1024" alt="" class="wp-image-100"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Other ION nodes detects the ledger transaction, it connects to its peer node and retrieves the Batch file to maintain the state of the DID.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>AAD VC Service</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>AAD VC service can be seen as an API server which serves the API calls for two main purposes: Issuance and Verification of the VC.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>VC is a digital credential which has claims about the subject of the VC and its signed by private key of an issuer's DID. Below is an example of an AAD VC.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":66,"width":288,"height":536,"sizeSlug":"large","linkDestination":"none","style":{"color":[]},"className":"is-style-default"} -->
+<figure class="wp-block-image size-large is-resized is-style-default"><img src="https://sabih114253105.files.wordpress.com/2022/03/aad-vc.jpeg?w=549" alt="" class="wp-image-66" width="288" height="536"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group -->
@@ -136,14 +164,26 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>In a typical AAD VC issuance scenario, Microsoft Authenticator will download a VC issuance request after scanning a QR code. After downloading the issuance request, Microsoft Authenticator will process the request which involves resolving the DID to a DID document and checking the Linked Domain. Depending on VC issuance contract requirement, Microsoft Authenticator might requst additional information from the use in the form of an ID token or self-asserted. In the end AAD VC service will provide a VC that contains claims about the subject made by the issuer. Microsoft Authenticator will store this VC which can later be used to prove the claims to a VC verifier.</p>
-<!-- /wp:paragraph --></div>
+<p>In a typical AAD VC issuance scenario</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Microsoft Authenticator will download a VC issuance request after scanning a QR code.</li><li>After downloading the issuance request, Microsoft Authenticator will process the request which involves resolving the DID to a DID document and checking the Linked Domain</li><li>Depending on VC issuance contract requirement, Microsoft Authenticator might request additional information from the user in the form of an ID token or self-asserted information</li><li>In the end AAD VC service will provide a VC that contains claims about the subject made by the issuer. Microsoft Authenticator will store this VC which can later be used to prove the claims to a VC verifier</li></ul>
+<!-- /wp:list --></div>
 <!-- /wp:group -->
+
+<!-- wp:paragraph -->
+<p>In a typical AAD VC verification scenario</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Microsoft Authenticator will download a VC presentation request after scanning a QR code.</li><li>After downloading the presentation request, Microsoft Authenticator validates the DID of the verifier and gains the consent to present the matching VC to verifier.</li><li>Once AAD VC service receives the VC information presented by Microsoft Authenticator, it will check if the VC is valid and provides the overall result to the verifier.</li></ul>
+<!-- /wp:list -->
 
 <!-- wp:heading {"level":3} -->
 <h3>Conclusion</h3>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>I hope, I was able to simplify the very complex working of DID and VC to some extent. There is a complete guide by Microsoft on AAD VC, available <a href="https://docs.microsoft.com/en-us/azure/active-directory/verifiable-credentials/" data-type="URL" data-id="https://docs.microsoft.com/en-us/azure/active-directory/verifiable-credentials/">here</a>. If you want to dive deeper into the mechanics and open standards then have a look at this <a href="https://www.w3.org/TR/did-core/" data-type="URL" data-id="https://www.w3.org/TR/did-core/">documentation</a>.</p>
+<p>I hope, I was able to simplify the very complex working of DID and VC to some extent. There is a complete guide by Microsoft on AAD VC, available <a href="https://docs.microsoft.com/en-us/azure/active-directory/verifiable-credentials/">here</a>. If you want to dive deeper into the mechanics and open standards then have a look at this <a href="https://www.w3.org/TR/did-core/">documentation</a>.</p>
 <!-- /wp:paragraph -->
