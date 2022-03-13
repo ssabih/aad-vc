@@ -139,7 +139,7 @@
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->
-<p>Other ION nodes detects the ledger transaction, it connects to its peer node and retrieves the Batch file to maintain the state of the DID.</p>
+<p>Other ION nodes detects the ledger transaction, it connects to its peer node and retrieves the Batch file to maintain the state of the DID. When it receives a request for DID document, ION looks through the Batch operations in chronological order to produce a DID document to be returned. </p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading {"level":3} -->
