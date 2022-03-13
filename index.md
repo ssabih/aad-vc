@@ -168,7 +168,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:list -->
-<ul><li>Microsoft Authenticator will download a VC issuance request after scanning a QR code.</li><li>After downloading the issuance request, Microsoft Authenticator will process the request which involves resolving the DID to a DID document and checking the Linked Domain</li><li>Depending on VC issuance contract requirement, Microsoft Authenticator might request additional information from the user in the form of an ID token or self-asserted information</li><li>In the end AAD VC service will provide a VC that contains claims about the subject made by the issuer. Microsoft Authenticator will store this VC which can later be used to prove the claims to a VC verifier.</li></ul>
+<ul><li>Microsoft Authenticator will download a VC issuance request after scanning a QR code.</li><li>After downloading the issuance request, Microsoft Authenticator will process the request which involves resolving the DID to a DID document and checking the Linked Domain.</li><li>Depending on VC issuance contract requirement, Microsoft Authenticator might request additional information from the user in the form of an ID token or self-asserted information.</li><li>In the end AAD VC service will provide a VC that contains claims about the subject made by the issuer. Microsoft Authenticator will store this VC which can later be used to prove the claims to a VC verifier.</li></ul>
 <!-- /wp:list --></div>
 <!-- /wp:group -->
 
