@@ -123,7 +123,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Now that I have mentioned ION in my previous section, let me explain it briefly. Identity Overlay Network (ION) in simple words is a storage mechanism for DID documents. In the world of DID, everything needs to be decentralized. ION nodes are not owned by any single entity and anyone can spin up an ION node and become part of the ION network. ION provides a permissionless system for DID</p>
+<p>Now that I have mentioned ION in my previous section, let me explain it briefly. Identity Overlay Network (ION) in simple words is a storage mechanism for DID documents. In the world of DID, everything needs to be decentralized. ION nodes are not owned by any single entity and anyone can spin up an ION node and become part of the ION network. ION provides a permissionless system for DID.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -131,7 +131,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>All the signed Sidetree transactions are put in a Batch file which is connected to an Anchor file that has the Merkle Root. What's written to the ledger (Bitcoin) is the single IPFS hash of the singed Anchor file that can represent thousands of DID operations in a specific Batch. IPFS is used as P2P file replication protocol in ION</p>
+<p>All the signed Sidetree transactions are put in a Batch file which is connected to an Anchor file that has the Merkle Root. What's written to the ledger (Bitcoin) is the single IPFS hash of the singed Anchor file that can represent thousands of DID operations in a specific Batch. IPFS is used as P2P file replication protocol in ION.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"id":100,"sizeSlug":"large","linkDestination":"none"} -->
@@ -168,7 +168,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:list -->
-<ul><li>Microsoft Authenticator will download a VC issuance request after scanning a QR code.</li><li>After downloading the issuance request, Microsoft Authenticator will process the request which involves resolving the DID to a DID document and checking the Linked Domain</li><li>Depending on VC issuance contract requirement, Microsoft Authenticator might request additional information from the user in the form of an ID token or self-asserted information</li><li>In the end AAD VC service will provide a VC that contains claims about the subject made by the issuer. Microsoft Authenticator will store this VC which can later be used to prove the claims to a VC verifier</li></ul>
+<ul><li>Microsoft Authenticator will download a VC issuance request after scanning a QR code.</li><li>After downloading the issuance request, Microsoft Authenticator will process the request which involves resolving the DID to a DID document and checking the Linked Domain</li><li>Depending on VC issuance contract requirement, Microsoft Authenticator might request additional information from the user in the form of an ID token or self-asserted information</li><li>In the end AAD VC service will provide a VC that contains claims about the subject made by the issuer. Microsoft Authenticator will store this VC which can later be used to prove the claims to a VC verifier.</li></ul>
 <!-- /wp:list --></div>
 <!-- /wp:group -->
 
