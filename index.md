@@ -123,7 +123,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p>Now that I have mentioned ION in my previous section, let me explain it briefly. Identity Overlay Network (ION) in simple words is a storage mechanism for DID documents. In the world of DID, everything needs to be decentralized. ION nodes are not owned by any single entity and anyone can spin up an ION node and become part of the ION network. ION provides a permissionless network for DID</p>
+<p>Now that I have mentioned ION in my previous section, let me explain it briefly. Identity Overlay Network (ION) in simple words is a storage mechanism for DID documents. In the world of DID, everything needs to be decentralized. ION nodes are not owned by any single entity and anyone can spin up an ION node and become part of the ION network. ION provides a permissionless system for DID</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
@@ -131,7 +131,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph -->
-<p>All the signed Sidetree transactions are put in a Batch file which is connected to an Anchor file that has the Merkle Root. What's written to the ledger (Bitcoin) is the single IPFS hash of the singed Anchor file that can represent thousands of DID operations in a specific Batch.</p>
+<p>All the signed Sidetree transactions are put in a Batch file which is connected to an Anchor file that has the Merkle Root. What's written to the ledger (Bitcoin) is the single IPFS hash of the singed Anchor file that can represent thousands of DID operations in a specific Batch. IPFS is used as P2P file replication protocol in ION</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"id":100,"sizeSlug":"large","linkDestination":"none"} -->
